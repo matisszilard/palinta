@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: palinta-device
+  name: palinta-device
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: palinta-device
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+      labels:
+        app: palinta-device
+    spec:
+      containers:
+        - image: mszg/palinta-device:latest
+          name: palinta-device
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: palinta-device
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: palinta-device
+  labels:
+    app: palinta-device
+    project: palinta
+spec:
+  type: ClusterIP
+  selector:
+      app: palinta-device
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+---

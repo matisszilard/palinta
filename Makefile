@@ -7,7 +7,19 @@
 
 .PHONY: all
 
-all: docker-build
+all: build
+
+palinta-up:
+	oc apply -f ${DEVOPS}/devops-palinta/devops/palinta/palinta-user.yaml -n msz-palinta
+	oc apply -f ${DEVOPS}/devops-palinta/devops/palinta/palinta-device.yaml -n msz-palinta
+
+palinta-down:
+	oc delete -f ${DEVOPS}/devops-palinta/devops/palinta/palinta-user.yaml -n msz-palinta
+	oc delete -f ${DEVOPS}/devops-palinta/devops/palinta/palinta-device.yaml -n msz-palinta
+
+up: palinta-up
+
+down: palinta-down
 
 #  __
 # |__)     . |  _|
