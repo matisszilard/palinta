@@ -1,0 +1,32 @@
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+          agent {
+            kubernetes {
+              label 'msz-golang'
+              defaultContainer 'builder'
+              yaml """
+kind: Pod
+metadata:
+  name: msz-golang
+spec:
+  containers:
+  - name: builder
+    image: golang:1.14.6
+    imagePullPolicy: Always
+    env:
+    - name: GOCACHE
+      value: "/home/jenkins/agent/.cache"
+    tty: true
+        """
+            } // kubernetes
+          } // agent
+          steps {
+              script {
+                sh "make build"
+              } // container
+          } // steps
+        } // stage(build)
+    } // stages
+} // pipeline
