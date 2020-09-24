@@ -256,6 +256,8 @@ github.com/mailru/easyjson v0.7.6 h1:8yTIVnZgCoiM1TgqoeTl+LfU5Jg6/xL3QhGQnimLYnA
 github.com/mailru/easyjson v0.7.6/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
 github.com/matisszilard/devops-palinta v0.0.0-20200828095924-9857d3b4fdef h1:RW6DeoA5ZxqLHvB4Bno0uKDiC4VEcSFZAMrmxSfs/Eo=
 github.com/matisszilard/devops-palinta v0.0.0-20200828095924-9857d3b4fdef/go.mod h1:hfOMp/ev5Ge4ymY44/antOD7Id3zVtan5n1uAyUPfNU=
+github.com/matisszilard/devops-palinta v0.1.0 h1:LBB+VhPgUq79PwmpflHNKwwLUKcNO+C65uNQCUkORK0=
+github.com/matisszilard/devops-palinta v0.1.0/go.mod h1:hfOMp/ev5Ge4ymY44/antOD7Id3zVtan5n1uAyUPfNU=
 github.com/matisszilard/devops-palinta/devops/4-terraform/lambda/oath v0.0.0-20200825062042-7236909b6e6d/go.mod h1:gH66lhGKIzcoUVJF0eB/S/US8aUNltOiMJmVsGWLwoE=
 github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
 github.com/mattn/go-isatty v0.0.3/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
