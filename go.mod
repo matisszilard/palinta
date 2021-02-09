@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/bshuster-repo/logrus-logstash-hook v1.0.0
-	github.com/eclipse/paho.mqtt.golang v1.2.0
+	github.com/eclipse/paho.mqtt.golang v1.3.2
 	github.com/go-kit/kit v0.10.0
 	github.com/influxdata/influxdb v1.8.3
 	github.com/matisszilard/devops-palinta v0.1.0
